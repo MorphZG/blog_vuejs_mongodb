@@ -1,11 +1,9 @@
 <script setup>
-  import postCard from "@/components/postCard.vue"
   import store from "@/store"
 </script>
 
 <template>
   <main>
-
 
     <h2>Content page</h2>
     <!--list all content here-->

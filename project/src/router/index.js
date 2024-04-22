@@ -30,7 +30,7 @@ const router = createRouter({
     },
     {
       path: "/content/:postTitle",
-      name: "postTitle",
+      name: "post",
       component: postCard
     }
   ]

@@ -3,14 +3,15 @@
   import store from "@/store"
 
   const route = useRoute()
-  const post = store.posts.find((title) => { title == $route.params })
+  const post = store.posts.find((arrayElement) => { return arrayElement.title == route.params.postTitle })
+
 </script>
 
 <template>
   <div class="post-wrapper">
-    <p>{{ $route.params }}</p>
     <p>{{ post }}</p>
   </div>
+
 
 </template>
 
