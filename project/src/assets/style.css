@@ -1,0 +1,25 @@
+/* Fonts: #Roboto Mono; ##Cabin; ###Lekton */
+h1 {
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+}
+h2 {
+  font-family: "Cabin";
+  font-style: normal;
+}
+body {
+  font-family: "Lekton";
+  font-style: normal;
+
+  background-color: #2a2e36;
+  color: white;
+}
+
+.post-wrapper {
+  margin: 20px;
+  padding: 5px 0px 5px 30px;
+  border: 1px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
