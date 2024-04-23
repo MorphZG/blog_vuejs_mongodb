@@ -6,14 +6,18 @@
 
   <header>
     <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/content">Content</RouterLink>
-        <RouterLink to="/publish">Publish</RouterLink>
+      <h1 class="text-3xl font-bold underline">Welcome!</h1>
+      <nav class="">
+        <RouterLink class="px-2" to="/">Home</RouterLink>
+        <RouterLink class="px-2" to="/about">About</RouterLink>
+        <RouterLink class="px-2" to="/content">Content</RouterLink>
+        <RouterLink class="px-2" to="/publish">Publish</RouterLink>
       </nav>
     </div>
-    <h2>Zoran Topic</h2>
+
+    <a href="/">
+      <h2 class="font-cabin text-center text-6xl">Zoran Topic</h2>
+    </a>
   </header>
 
   <RouterView />

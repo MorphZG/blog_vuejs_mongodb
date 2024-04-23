@@ -8,8 +8,8 @@
 </script>
 
 <template>
-  <div class="post-wrapper">
-    <p>{{ post }}</p>
+  <div class="post-wrapper border-2 cursor-pointer">
+    <p class="">{{ post }}</p>
   </div>
 
 

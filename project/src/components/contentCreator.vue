@@ -4,32 +4,12 @@
 
 <template>
 
-  <form action="/content/:slug" method="post">
-    <div class="post-container">
-      <input class="title" type="text">
-      <textarea class="content" name="content" id="content-area" cols="100" rows="10"></textarea>
-    </div>
+  <form class="place-content-center" action="/content/:slug" method="post">
+    <input class="block h-10 m-5 border-2 shadow-2xl " type="text" placeholder="title">
+    <textarea class="block m-5 border-2 shadow-2xl" name="content-area" id="content-area"
+      placeholder="content"></textarea>
   </form>
 
 </template>
 
-<style lang="css" scoped>
-
-  .post-container {
-    margin: 50px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .title {
-    padding: 5px;
-    margin: 10px;
-  }
-
-  .content {
-    padding: 5px;
-    margin: 10px;
-  }
-
-</style>
+<style lang="css" scoped></style>

@@ -7,10 +7,10 @@
 
     <h2>Content page</h2>
     <!--list all content here-->
-    <div class="post-wrapper" v-for="post, itemIndex in store.posts" :key="itemIndex"
+    <div class="max-w-xl border-2 cursor-pointer" v-for="post, itemIndex in store.posts" :key="itemIndex"
       @click="$router.push(`/content/${post.title}`)">
-      <h3>{{ post.title }}</h3>
-      <p>{{ post.description }}</p>
+      <h3 class="">{{ post.title }}</h3>
+      <p class="">{{ post.description }}</p>
     </div>
 
   </main>
