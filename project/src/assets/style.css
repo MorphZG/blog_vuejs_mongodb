@@ -1,30 +1,5 @@
-/* @tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
-
-/* Fonts: #Roboto Mono; ##Cabin; ###Lekton */
-h1 {
-  font-family: "Roboto Mono", monospace;
-  font-style: normal;
-}
-h2 {
-  font-family: "Cabin";
-  font-style: normal;
-}
-body {
-  font-family: "Lekton";
-  font-style: normal;
-
-  background-color: #2a2e36;
-  color: white;
-}
-
-.post-wrapper {
-  margin: 20px;
-  padding: 5px 0px 5px 30px;
-  border: 1px;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: white;
-  cursor: pointer;
-}
+@tailwind utilities;
