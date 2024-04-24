@@ -8,8 +8,13 @@
 </script>
 
 <template>
-  <div class="post-wrapper border-2 cursor-pointer">
-    <p class="">{{ post }}</p>
+  <div class="post-wrapper p-10">
+    <p class="">{{ post.id }}</p>
+    <h1 class="text-3xl font-robotoMono font-bold">{{ post.title }}</h1>
+    <br>
+    <p class="font-cabin">{{ post.description }}</p>
+    <br>
+    <p class="font-lekton">{{ post.content }}</p>
   </div>
 
 
