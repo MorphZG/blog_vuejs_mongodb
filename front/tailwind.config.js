@@ -11,9 +11,9 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      robotoMono: "roboto-mono",
-      cabin: "cabin",
-      lekton: "lekton"
+      robotoMono: ["roboto-mono", "Courier New"],
+      cabin: ["cabin", "Georgia"],
+      lekton: ["lekton", "Arial"]
     }
   }
 };
