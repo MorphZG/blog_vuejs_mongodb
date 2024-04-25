@@ -5,16 +5,12 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <div class="wrapper">
-      <a href="/">
-        <h2 class="text-center font-robotoMono text-6xl">Zoran Topic</h2>
-      </a>
-      <nav class="font-robotoMono">
-        <RouterLink class="px-2" to="/">Home</RouterLink>
-        <RouterLink class="px-2" to="/about">About</RouterLink>
-        <RouterLink class="px-2" to="/content">Content</RouterLink>
-        <RouterLink class="px-2" to="/publish">Publish</RouterLink>
+      <nav class="m-10 font-robotoMono">
+        <RouterLink class="m-5" to="/">Home</RouterLink>
+        <RouterLink class="m-5" to="/about">About</RouterLink>
+        <RouterLink class="m-5" to="/content">Content</RouterLink>
+        <RouterLink class="m-5" to="/publish">Publish</RouterLink>
       </nav>
-      <hr class="my-3" />
     </div>
   </header>
 

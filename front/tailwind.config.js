@@ -12,6 +12,7 @@ export default {
     extend: {},
     fontFamily: {
       robotoMono: ["roboto-mono", "Courier New"],
+      roboto: ["roboto", "Courier New"],
       cabin: ["cabin", "Georgia"],
       lekton: ["lekton", "Arial"]
     }
