@@ -1,5 +1,6 @@
 <script setup>
 import store from "@/store";
+import { ref } from "vue";
 
 function getWordCount(string) {
   let words = string.split(" ");
