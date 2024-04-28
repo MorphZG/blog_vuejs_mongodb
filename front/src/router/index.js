@@ -4,6 +4,7 @@ import ContentView from "@/views/ContentView.vue";
 import AboutView from "@/views/AboutView.vue";
 import PublishView from "@/views/PublishView.vue";
 import postCard from "@/components/postCard.vue";
+import ContentCreator from "@/components/contentCreator.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +30,7 @@ const router = createRouter({
       component: PublishView
     },
     {
-      path: "/content/:postTitle",
+      path: "/content/:postId",
       name: "post",
       component: postCard
     }
