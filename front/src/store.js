@@ -1,30 +1,37 @@
 import { reactive } from "vue";
+import { uid } from "uid";
 
 const store = reactive({
   posts: [
     {
-      title: "Cudnovati naslov",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      date: new Date(),
+      id: uid(),
+      title: "Izgubljen u vremenu",
+      date: Date(),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio ut enim blandit volutpat maecenas volutpat. Vel orci porta non pulvinar neque. Nulla at volutpat diam ut venenatis tellus in metus. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Amet facilisis magna etiam tempor. Fermentum odio eu feugiat pretium. Potenti nullam ac tortor vitae purus faucibus. Consequat id porta nibh venenatis cras sed. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Praesent elementum facilisis leo vel. Malesuada nunc vel risus commodo viverra."
+        "Disem, jos uvjek disem. Cujem srce kako tutnji, pumpa zivot kroz tjelo. disem, jos uvjek disem. Gledam na sat. Izgubio sam osjecaj za vrijeme. Moje misli tamo negdje, pored nje, izgubljen u mirisu. Zelim je. Samo nju i vrijeme.",
+      tags: ["personal", "short"],
+      categories: "personal"
     },
     {
-      title: "Alisa u zemlji cudesa",
-      description:
-        "Odio ut enim blandit volutpat maecenas volutpat. Vel orci porta non pulvinar neque. Nulla at volutpat diam ut venenatis tellus in metus.",
-      date: new Date(),
-      content:
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio ut enim blandit volutpat maecenas volutpat. Vel orci porta non pulvinar neque. Nulla at volutpat diam ut venenatis tellus in metus. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Amet facilisis magna etiam tempor. Fermentum odio eu feugiat pretium. Potenti nullam ac tortor vitae purus faucibus. Consequat id porta nibh venenatis cras sed. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Praesent elementum facilisis leo vel. Malesuada nunc vel risus commodo viverra. "
+      id: uid(),
+      title: "Who am i? For real",
+      date: Date(),
+      content: `Young, naive and overconfident. Now, 36 years of age, frustrated but highly motivated. I thought success will come by default but was wrong. I always felt confident with skills and value i offer to my employee. bartender since 2005 till now. and i was sure i am a good one. but after my 30 birthday i started to question. somehow i realized i have other skills and interests that none of my colleagues have. In more than a decade of my bartending None of my work buddies. few more years have passed and i am now sure i am different. i just don’t fit into the stereotype.
+
+Started to wonder. who am i actually? my natural talent. some born as warriors, some as bards, musicians and others as clowns. Who am i? And i found the answer. What you do in your free time? That is career for you. Ever since high school technology was around me. While friends just play the games. I always tried to find how mechanics work? How damage is calculated? How to get highest value with minimal effort. And just like that my head bulb was lit. i love code, i love exploiting the system rules to get optimal results. never really a math guy but mechanics in the background.
+
+When i started coding in visual studio i got access to simplified git interface. I had urge to learn how all those components work together. Launch the terminal and learn git, learn bash and linux scripting… like puzzles connecting and forming a picture. I realized the backend for web apps is my perfect fit. But then came machine learning and all those really challenging stuff years ahead of me. Currently to high above my level. With 36 i think i am now more than ready to take that bite.`,
+      tags: ["life", "career"],
+      categories: ["life", "career"]
     },
     {
-      title: "Zagreb grad",
-      description:
-        "Vel quam elementum pulvinar etiam non quam lacus suspendisse. Non curabitur gravida arcu ac tortor dignissim convallis aenean.",
-      date: new Date(),
+      id: uid(),
+      title: "Izgubljen u vremenu",
+      date: Date(),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Odio ut enim blandit volutpat maecenas volutpat. Vel orci porta non pulvinar neque. Nulla at volutpat diam ut venenatis tellus in metus. Vel quam elementum pulvinar etiam non quam lacus suspendisse. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Amet facilisis magna etiam tempor. Fermentum odio eu feugiat pretium. Potenti nullam ac tortor vitae purus faucibus. Consequat id porta nibh venenatis cras sed. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Praesent elementum facilisis leo vel. Malesuada nunc vel risus commodo viverra."
+        "Disem, jos uvjek disem. Cujem srce kako tutnji, pumpa zivot kroz tjelo. disem, jos uvjek disem. Gledam na sat. Izgubio sam osjecaj za vrijeme. Moje misli tamo negdje, pored nje, izgubljen u mirisu. Zelim je. Samo nju i vrijeme.",
+      tags: ["personal", "short"],
+      categories: "personal"
     }
   ]
 });

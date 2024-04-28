@@ -4,7 +4,7 @@ import store from "@/store";
 
 const route = useRoute();
 const post = store.posts.find((arrayElement) => {
-  return arrayElement.title == route.params.postTitle;
+  return arrayElement.id == route.params.postId;
 });
 </script>
 

@@ -1,10 +1,10 @@
 <script setup>
-  import contentCreator from "@/components/contentCreator.vue";
+import contentCreator from "@/components/contentCreator.vue";
 </script>
 
 <template>
   <main>
-    <h1 class=" ml-10 font-roboto font-thin text-2xl">>> Publish</h1>
+    <h1 class="ml-10 font-roboto text-2xl font-thin">>> Publish</h1>
     <contentCreator />
   </main>
 </template>
