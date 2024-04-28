@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb://localhost:27017/personalWeb");
-
 const postSchema = new mongoose.Schema({
     title: String,
     Author: String,
