@@ -6,13 +6,13 @@ import { ref } from "vue";
 const title = ref("");
 const content = ref("");
 
-async function postData() {
+async function postData(event) {
   try {
     let response = await axios.post("http://localhost:3030/api/newpost", {
       title: title.value,
       content: content.value
     });
-    console.log(response);
+    event.target.reset();
   } catch (err) {
     console.error(err);
   }
@@ -20,9 +20,9 @@ async function postData() {
 </script>
 
 <template>
-  <form class="" @submit.prevent="postData" method="post">
+  <form class="flex flex-col justify-center" @submit.prevent="postData" method="post">
     <input
-      class="m-5 block h-10 rounded border-2 text-slate-900 shadow-2xl"
+      class="h-8 rounded text-slate-900 shadow-2xl"
       v-model="title"
       type="text"
       name="title"
@@ -30,8 +30,9 @@ async function postData() {
       size="60"
       placeholder="title"
     />
+    <br />
     <textarea
-      class="m-5 block rounded border-2 text-slate-900 shadow-2xl"
+      class="rounded text-slate-900 shadow-2xl"
       v-model="content"
       name="content"
       id="content-input"
@@ -40,11 +41,11 @@ async function postData() {
       placeholder="content"
     ></textarea>
     <button
-      class="m-5 block rounded bg-neutral-800 px-2 py-1 font-cabin text-white hover:bg-neutral-700"
+      class="rounded bg-neutral-800 font-cabin text-white hover:bg-neutral-700"
       @submit.prevent="postData"
       type="submit"
     >
-      Submit
+      Publish
     </button>
   </form>
 </template>

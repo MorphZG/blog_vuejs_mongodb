@@ -12,22 +12,25 @@ app.use(express.json());
 mongoose.connect("mongodb://localhost:27017/personalWeb");
 
 app.post("/api/newpost", async (req, res) => {
-    console.log(req.body);
     try {
         let title = req.body.title;
+        let author = req.body.author;
         let content = req.body.content;
-        console.log(title, content);
+        let current_date = new Date().toLocaleDateString("en-GB");
+        let tags = [];
+        let category = req.body.category;
 
         let newPost = new Post({
             title: title,
-            Author: null,
-            date: Date(),
+            author: author,
+            date: current_date,
             content: content,
-            tags: null,
-            category: null,
+            tags: tags,
+            category: category,
         });
-        await newPost.save();
-        res.send("New post saved!");
+        let savedPost = await newPost.save();
+        console.log(savedPost);
+        res.sendStatus(201);
     } catch (err) {
         console.error(err);
         res.send("You fucked up!");

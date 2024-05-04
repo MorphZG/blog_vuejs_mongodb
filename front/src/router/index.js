@@ -3,7 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import ContentView from "@/views/ContentView.vue";
 import AboutView from "@/views/AboutView.vue";
 import PublishView from "@/views/PublishView.vue";
-import postCard from "@/components/postCard.vue";
+import PostView from "@/views/PostView.vue";
 import ContentCreator from "@/components/contentCreator.vue";
 
 const router = createRouter({
@@ -32,7 +32,7 @@ const router = createRouter({
     {
       path: "/content/:postId",
       name: "post",
-      component: postCard
+      component: PostView
     }
   ]
 });

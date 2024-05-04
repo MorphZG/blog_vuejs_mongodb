@@ -1,17 +1,17 @@
 {
-  "name": "personal_web",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "main.js",
-  "scripts": {
-    "dev": "node main.js"
-  },
-  "author": "Zoran Topic",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "mongoose": "^8.3.2"
-  }
+    "name": "personal_web",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "main.js",
+    "scripts": {
+        "dev": "nodemon main.js"
+    },
+    "author": "Zoran Topic",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "mongoose": "^8.3.2"
+    }
 }
