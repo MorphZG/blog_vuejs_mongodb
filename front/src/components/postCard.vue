@@ -23,7 +23,7 @@ const props = defineProps({ test: String });
   <main>
     <!--list content here-->
     <div
-      class="hoverFx m-1 cursor-pointer rounded-lg border-2 border-rose-500 bg-neutral-800 p-5"
+      class="border-gradient border-gradient-purple hoverFx m-1 cursor-pointer bg-neutral-800 p-5"
       v-for="(post, itemIndex) in store.posts"
       :key="itemIndex"
       @click="$router.push(`/content/${post.id}`)"
