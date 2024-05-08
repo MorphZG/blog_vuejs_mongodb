@@ -9,7 +9,11 @@ export default {
   ],
   plugins: [],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        imageName: "url('src/assets/image.png')" // bg-imageName
+      }
+    },
     fontFamily: {
       robotoMono: ["roboto-mono", "Courier New"],
       roboto: ["roboto", "Courier New"],

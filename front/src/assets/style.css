@@ -20,3 +20,17 @@
   'opsz' 24
 }
 }
+
+.module-wrap {
+  padding: 1rem;
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+}
+
+
+.hoverFx:hover {
+  background-color: rgb(44, 44, 44);
+  box-shadow: 0 0 8px #9ecaed;
+  border-color: #9ecaed;
+}
+
