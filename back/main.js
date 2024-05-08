@@ -13,27 +13,18 @@ mongoose.connect("mongodb://localhost:27017/personalWeb");
 
 app.post("/api/newpost", async (req, res) => {
     try {
-        let title = req.body.title;
-        let author = req.body.author;
-        let content = req.body.content;
-        let current_date = new Date().toLocaleDateString("en-GB");
-        let tags = [];
-        let category = req.body.category;
-
         let newPost = new Post({
-            title: title,
-            author: author,
-            date: current_date,
-            content: content,
-            tags: tags,
-            category: category,
+            createdAt: new Date(),
+            title: req.body.title,
+            content: req.body.content,
+            author: req.body.author,
+            tags: req.body.tags,
+            category: req.body.category,
         });
         let savedPost = await newPost.save();
-        console.log(savedPost);
         res.sendStatus(201);
     } catch (err) {
-        console.error(err);
-        res.send("You fucked up!");
+        console.log(err);
     }
 });
 

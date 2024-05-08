@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const postSchema = new mongoose.Schema({
-    title: String,
-    author: String,
-    date: Date,
-    content: String,
+    createdAt: { type: Date, default: Date.now, required: true },
+    title: { type: String, required: true },
+    content: { type: String, required: true },
+    author: { type: String },
     tags: [String],
     category: String,
 });
