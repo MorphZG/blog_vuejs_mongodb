@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import postCard from "@/components/postCard.vue";
+</script>
 
 <template>
   <main class="">

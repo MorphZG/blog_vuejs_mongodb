@@ -3,17 +3,19 @@ import axios from "axios";
 import { ref } from "vue";
 // send post request to /api/newPost
 
-const title = ref("");
+const title = ref(null);
 const content = ref("# Hello world!");
 const tags = ref([]);
 
 async function postData(event) {
+  let tagList = tags.value.split(" ");
+
   try {
     let response = await axios.post("http://localhost:3030/api/newpost", {
       title: title.value,
       author: "Zoran Topic",
       content: content.value,
-      tags: tags.value
+      tags: tagList
     });
     event.target.reset();
   } catch (err) {
@@ -49,7 +51,7 @@ async function postData(event) {
         type="text"
         name="tags"
         id="tags-input"
-        placeholder="Tags"
+        placeholder="Tags split with space"
       />
       <div class="flex-row justify-center">
         <button
