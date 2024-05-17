@@ -1,5 +1,5 @@
 <script setup>
-import usePostsStore from "@/stores/posts";
+import usePostsStore from "@/stores/postStore";
 import { useRoute } from "vue-router";
 
 const route = useRoute();

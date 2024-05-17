@@ -11,7 +11,7 @@ async function postData(event) {
   let tagList = tags.value.split(" ");
 
   try {
-    let response = await axios.post("http://localhost:3030/api/newpost", {
+    let response = await axios.post("http://localhost:3030/api/posts", {
       title: title.value,
       author: "Zoran Topic",
       content: content.value,
