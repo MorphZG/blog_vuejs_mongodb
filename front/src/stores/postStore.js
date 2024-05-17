@@ -1,11 +1,9 @@
 import axios from "axios";
 import { defineStore } from "pinia";
-import { uid } from "uid";
 import { ref } from "vue";
 
 // https://pinia.vuejs.org/getting-started.html
 const usePostsStore = defineStore("posts", () => {
-  const someRandomData = ref("randomData");
   const posts = ref([]);
 
   async function fetchPosts() {
@@ -13,9 +11,11 @@ const usePostsStore = defineStore("posts", () => {
     response.data.forEach((post) => {
       posts.value.push(post);
     });
-    console.log(posts.value);
   }
-  return { posts, someRandomData, fetchPosts };
+  return {
+    posts,
+    fetchPosts
+  };
 });
 
 export default usePostsStore;

@@ -22,6 +22,12 @@ async function postData(event) {
     console.error(err);
   }
 }
+
+function resetForm(event) {
+  title.value = null;
+  content.value = null;
+  tags.value = null;
+}
 </script>
 
 <template>
@@ -58,11 +64,12 @@ async function postData(event) {
           class="mx-2 rounded bg-neutral-800 px-16 py-1 font-cabin text-sm text-white transition duration-300 ease-in-out hover:bg-green-800"
           type="submit"
         >
-          Publish
+          Submit
         </button>
         <button
           class="mx-2 rounded bg-neutral-800 px-16 py-1 font-cabin text-sm text-white transition duration-300 ease-in-out hover:bg-red-800"
-          type="submit"
+          type="button"
+          @click="resetForm"
         >
           Cancel
         </button>

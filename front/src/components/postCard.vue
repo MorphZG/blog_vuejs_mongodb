@@ -14,7 +14,6 @@ function getReadingTime(content) {
   return Math.ceil(words / wordsMinute);
 }
 
-// import usePostsStore and display usePostsStore.posts object in card format
 const postsStore = usePostsStore();
 </script>
 
@@ -30,9 +29,6 @@ const postsStore = usePostsStore();
       <h1 class="mb-2 text-center font-robotoMono text-xl font-bold">{{ post.title }}</h1>
       <p class="text-center font-lekton">reading time: {{ getReadingTime(post.content) }} min</p>
     </div>
-    <button class="rounded-md bg-slate-500 px-3 py-1" @click="postsStore.fetchPosts">
-      fetch posts
-    </button>
   </main>
 </template>
 

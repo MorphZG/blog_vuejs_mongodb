@@ -4,14 +4,14 @@ import cors from "cors";
 import Post from "./models/Post.js";
 
 const app = express();
-// if front and back end are hosted on different domains
-// enable Cross Origin Resourse Sharing
-app.use(cors());
+
+app.use(cors()); // if front and back end are hosted on different domains
 app.use(express.json());
 
 mongoose.connect("mongodb://localhost:27017/personalWeb");
 
-app.post("/api/newpost", async (req, res) => {
+// routes
+app.post("/api/posts", async (req, res) => {
     try {
         let newPost = new Post({
             createdAt: new Date(),
@@ -22,7 +22,20 @@ app.post("/api/newpost", async (req, res) => {
             category: req.body.category,
         });
         let savedPost = await newPost.save();
+
+        console.log(`saved post: \n${savedPost}`);
+
         res.sendStatus(201);
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+app.get("/api/posts", async (req, res) => {
+    try {
+        let results = await Post.find({});
+        console.log(results);
+        res.send(results);
     } catch (err) {
         console.log(err);
     }
