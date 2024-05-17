@@ -1,5 +1,5 @@
 <script setup>
-import usePostsStore from "@/store";
+import usePostsStore from "@/stores/posts";
 import { ref } from "vue";
 
 // import usePostsStore and display usePostsStore.posts object in card format

@@ -25,6 +25,19 @@ const usePostsStore = defineStore("posts", () => {
   return { posts };
 });
 
+export default usePostsStore;
+
+/*
+
 // fetch post from db
 
-export default usePostsStore;
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const targetID = route.params.postId
+
+async function getPost() {
+let foundPost = await db.findOne({id: targetID})
+}
+
+*/

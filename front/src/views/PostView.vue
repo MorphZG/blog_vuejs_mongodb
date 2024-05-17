@@ -1,12 +1,11 @@
 <script setup>
+import usePostsStore from "@/stores/posts";
 import { useRoute } from "vue-router";
-import usePostsStore from "@/store";
 
 const route = useRoute();
 const postsStore = usePostsStore();
 
-console.log(route.params.postId);
-console.log(postsStore.posts);
+console.log(`post ID: ${route.params.postId}`);
 
 let targetPost = postsStore.posts.find((arrayElement) => {
   return arrayElement.id == route.params.postId;
