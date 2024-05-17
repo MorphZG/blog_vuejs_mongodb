@@ -1,6 +1,6 @@
 <script setup>
-import usePostsStore from "@/stores/postStore";
-import { ref } from "vue";
+import usePostsStore from "@/stores/postsStore";
+import { onMounted } from "vue";
 
 function getWordCount(string) {
   let words = string.split(" ");
@@ -15,6 +15,12 @@ function getReadingTime(content) {
 }
 
 const postsStore = usePostsStore();
+onMounted(() => {
+  if (postsStore.posts.length < 1) {
+    postsStore.fetchPosts();
+    postsStore.getLatestPosts();
+  }
+});
 </script>
 
 <template>
@@ -24,9 +30,10 @@ const postsStore = usePostsStore();
       class="border-gradient border-gradient-purple hoverFx m-1 cursor-pointer bg-neutral-800 p-5"
       v-for="(post, itemIndex) in postsStore.posts"
       :key="itemIndex"
-      @click="$router.push(`/content/${post.id}`)"
+      @click="$router.push(`/content/${post._id}`)"
     >
       <h1 class="mb-2 text-center font-robotoMono text-xl font-bold">{{ post.title }}</h1>
+      <p class="text-center font-lekton">date: {{ post.createdAt }}</p>
       <p class="text-center font-lekton">reading time: {{ getReadingTime(post.content) }} min</p>
     </div>
   </main>

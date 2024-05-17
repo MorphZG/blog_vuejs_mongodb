@@ -34,7 +34,6 @@ app.post("/api/posts", async (req, res) => {
 app.get("/api/posts", async (req, res) => {
     try {
         let results = await Post.find({});
-        console.log(results);
         res.send(results);
     } catch (err) {
         console.log(err);

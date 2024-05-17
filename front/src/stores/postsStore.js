@@ -5,6 +5,7 @@ import { ref } from "vue";
 // https://pinia.vuejs.org/getting-started.html
 const usePostsStore = defineStore("posts", () => {
   const posts = ref([]);
+  const latestPosts = ref([]);
 
   async function fetchPosts() {
     const response = await axios.get("/api/posts");
@@ -12,9 +13,13 @@ const usePostsStore = defineStore("posts", () => {
       posts.value.push(post);
     });
   }
+
+  async function getLatestPosts() {}
   return {
     posts,
-    fetchPosts
+    latestPosts,
+    fetchPosts,
+    getLatestPosts
   };
 });
 

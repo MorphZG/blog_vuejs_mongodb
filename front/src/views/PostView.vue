@@ -1,5 +1,5 @@
 <script setup>
-import usePostsStore from "@/stores/postStore";
+import usePostsStore from "@/stores/postsStore";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -8,7 +8,7 @@ const postsStore = usePostsStore();
 console.log(`post ID: ${route.params.postId}`);
 
 let targetPost = postsStore.posts.find((arrayElement) => {
-  return arrayElement.id == route.params.postId;
+  return arrayElement._id == route.params.postId;
 });
 </script>
 
