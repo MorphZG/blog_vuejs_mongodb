@@ -5,24 +5,23 @@ import { onMounted } from "vue";
 
 const postsStore = usePostsStore();
 onMounted(() => {
-  if (postsStore.posts.length < 1) {
-    postsStore.fetchPosts();
-    postsStore.getLatestPosts();
-  }
+  postsStore.fetchPosts();
 });
 </script>
 
 <template>
   <section class="px-4">
     <h1 class="ml-10 font-roboto text-2xl font-thin">>> Featured Posts</h1>
-    <div v-for="(post, itemIndex) in postsStore.posts" :key="itemIndex">
-      {{ console.log(post._id) }}
-      <postCard
-        :post-id="post._id"
-        :title="post.title"
-        :created-at="post.createdAt"
-        :content="post.content"
-      />
+    <div class="flex flex-wrap justify-center">
+      <div class="" v-for="post in postsStore.posts" :key="post._id">
+        <postCard
+          :post-id="post._id"
+          :title="post.title"
+          :date-string="post.dateString"
+          :content="post.content"
+        />
+        {{ console.log(post) }}
+      </div>
     </div>
   </section>
 </template>
