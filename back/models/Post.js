@@ -6,7 +6,6 @@ const postSchema = new mongoose.Schema({
     content: { type: String, required: true },
     author: { type: String },
     tags: [String],
-    category: String,
 });
 
 const Post = mongoose.model("Post", postSchema);

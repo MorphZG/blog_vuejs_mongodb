@@ -19,7 +19,6 @@ app.post("/api/posts", async (req, res) => {
             content: req.body.content,
             author: req.body.author,
             tags: req.body.tags,
-            category: req.body.category,
         });
         let savedPost = await newPost.save();
 
