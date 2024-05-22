@@ -14,8 +14,7 @@ onMounted(() => {
 <template>
   <section class="">
     <h1 class="ml-10 font-roboto text-2xl font-thin">>> Featured Posts</h1>
-    <!--<div class="flex flex-wrap justify-center">-->
-    <div class="grid-container px-4r grid grid-cols-4">
+    <div class="grid grid-cols-3 justify-center gap-3 px-4">
       <div class="" v-for="post in postsStore.posts" :key="post._id">
         <postCard
           :post-id="post._id"

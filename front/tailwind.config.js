@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        imageName: "url('src/assets/image.png')" // bg-imageName
+        imageName: "url('src/assets/background.webp')" // bg-imageName
       }
     },
     fontFamily: {

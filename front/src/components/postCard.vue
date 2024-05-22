@@ -18,10 +18,10 @@ const props = defineProps({
   <!-- refactor using slots -->
   <main>
     <div
-      class="border-gradient border-gradient-purple hoverFx m-1 cursor-pointer bg-neutral-800 p-5"
+      class="border-gradient border-gradient-red hoverFx m-1 cursor-pointer bg-neutral-800 p-5"
       @click="$router.push(`/content/${postId}`)"
     >
-      <h1 class="mb-2 text-center font-robotoMono text-xl font-bold">{{ title }}</h1>
+      <h1 class="mb-2 truncate text-center font-robotoMono text-xl font-bold">{{ title }}</h1>
       <p class="text-center font-lekton">date: {{ dateString }}</p>
       <p class="text-center font-lekton">reading time: {{ getReadingTime(content) }} min</p>
     </div>

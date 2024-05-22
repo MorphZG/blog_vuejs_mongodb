@@ -34,7 +34,7 @@ function resetForm(event) {
   <div class="flex justify-center">
     <form class="flex w-2/4 flex-col items-center" @submit.prevent="postData" method="post">
       <input
-        class="mb-4 h-8 w-full rounded p-2 text-slate-900 shadow-2xl"
+        class="mb-4 h-8 w-full rounded bg-neutral-800 p-2 text-slate-100 shadow-2xl"
         v-model="title"
         type="text"
         name="title"
@@ -43,7 +43,7 @@ function resetForm(event) {
         required
       />
       <textarea
-        class="mb-4 w-full rounded p-2 text-slate-900 shadow-2xl"
+        class="mb-4 w-full rounded bg-neutral-800 p-2 text-slate-100 shadow-2xl"
         v-model="content"
         name="content"
         id="content-input"
@@ -52,7 +52,7 @@ function resetForm(event) {
         required
       ></textarea>
       <input
-        class="mb-4 h-8 w-full rounded p-2 text-slate-900 shadow-2xl"
+        class="mb-4 h-8 w-full rounded bg-neutral-800 p-2 text-neutral-200 shadow-2xl focus:border-0"
         v-model="tags"
         type="text"
         name="tags"
