@@ -1,9 +1,11 @@
 <script setup>
+import MarkdownIt from "markdown-it";
 import usePostsStore from "@/stores/postsStore";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 const postsStore = usePostsStore();
+const markdown = new MarkdownIt(); // render markdown
 
 console.log(`post ID: ${route.params.postId}`);
 
