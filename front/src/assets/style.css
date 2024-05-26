@@ -30,11 +30,8 @@
   border: 2px solid;
   border-image-slice: 1;
 }
-.border-gradient-purple {
-  border-image-source: linear-gradient(to bottom, #743ad5, #232323);
-}
 .border-gradient-red {
-  border-image-source: linear-gradient(to bottom, #ff0101, #232323);
+  border-image-source: linear-gradient(to bottom, rgb(294, 63, 94), #232323);
 }
 .only-top {
   border-left: 0;

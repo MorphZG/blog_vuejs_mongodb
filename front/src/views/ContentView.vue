@@ -1,6 +1,7 @@
 <script setup>
 import usePostsStore from "@/stores/postsStore";
 import postCard from "@/components/postCard.vue";
+import postList from "@/components/postList.vue";
 import { onMounted } from "vue";
 
 const postsStore = usePostsStore();
@@ -22,7 +23,21 @@ onMounted(() => {
           :date-string="post.dateString"
           :content="post.content"
         />
-        {{ console.log(post) }}
+      </div>
+    </div>
+  </section>
+  <!-- implement sorting -->
+  <!-- newest first / oldest first -->
+  <section class="my-10">
+    <div class="grid grid-cols-1 justify-start gap-10">
+      <div class="" v-for="post in postsStore.posts" :key="post._id">
+        <postList
+          :post-id="post._id"
+          :title="post.title"
+          :date-string="post.dateString"
+          :content="post.content"
+          :tags="post.tags"
+        />
       </div>
     </div>
   </section>
