@@ -18,12 +18,16 @@ const props = defineProps({
 <template>
   <!-- refactor using slots -->
   <main>
-    <div class="cursor-pointer" @click="$router.push(`/content/${postId}`)">
-      <p class="text-left font-lekton">{{ dateString }}</p>
-      <h1 class="text-md text-left font-robotoMono font-bold">{{ title }}</h1>
-      <p>{{ tags }}</p>
-      <p class="truncate">{{ content }}</p>
-      <p class="text-left font-lekton">reading time: {{ getReadingTime(content) }} min</p>
+    <div class="ml-10 flex cursor-pointer" @click="$router.push(`/content/${postId}`)">
+      <img src="https://placehold.co/200x150" alt="placeholder image" />
+
+      <div class="ml-5">
+        <p class="text-left font-lekton">{{ dateString }}</p>
+        <h1 class="text-md text-left font-robotoMono font-bold">{{ title }}</h1>
+        <p>{{ tags }}</p>
+        <p class="truncate">{{ content }}</p>
+        <p class="text-left font-lekton">reading time: {{ getReadingTime(content) }} min</p>
+      </div>
     </div>
   </main>
 </template>

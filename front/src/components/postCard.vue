@@ -19,11 +19,11 @@ const props = defineProps({
   <!-- refactor using slots -->
   <main>
     <div
-      class="border-gradient border-gradient-red hoverFx cursor-pointer bg-neutral-800 p-5"
+      class="border-gradient border-gradient-red hoverFx ml-10 cursor-pointer bg-neutral-800 p-5"
       @click="$router.push(`/content/${postId}`)"
     >
-      <h1 class="mb-2 truncate text-center font-robotoMono text-xl font-bold">{{ title }}</h1>
-      <p class="text-center font-lekton">date: {{ dateString }}</p>
+      <h1 class="truncate text-center font-robotoMono text-xl font-bold">{{ title }}</h1>
+      <img src="https://placehold.co/400x100" alt="placeholder image" />
       <p class="text-center font-lekton">reading time: {{ getReadingTime(content) }} min</p>
     </div>
   </main>
