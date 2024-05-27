@@ -10,7 +10,8 @@ const props = defineProps({
   title: String,
   createdAt: Date,
   dateString: String,
-  content: String
+  content: String,
+  tags: Array
 });
 </script>
 

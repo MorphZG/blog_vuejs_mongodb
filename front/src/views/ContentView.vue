@@ -14,7 +14,7 @@ onMounted(() => {
 
 <template>
   <section class="">
-    <h1 class="ml-10 font-roboto text-2xl font-thin">>> Featured Posts</h1>
+    <h1 class="mb-5 ml-10 font-roboto text-2xl font-thin">>> Featured Posts</h1>
     <div class="grid grid-cols-3 justify-center gap-3 px-4">
       <div class="" v-for="post in postsStore.posts" :key="post._id">
         <postCard
@@ -29,6 +29,7 @@ onMounted(() => {
   <!-- implement sorting -->
   <!-- newest first / oldest first -->
   <section class="my-10">
+    <h1 class="mb-5 ml-10 font-roboto text-2xl font-thin">>> Latest posts</h1>
     <div class="grid grid-cols-1 justify-start gap-10">
       <div class="" v-for="post in postsStore.posts" :key="post._id">
         <postList
@@ -36,7 +37,6 @@ onMounted(() => {
           :title="post.title"
           :date-string="post.dateString"
           :content="post.content"
-          :tags="post.tags"
         />
       </div>
     </div>

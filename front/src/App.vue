@@ -1,22 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import buttonOne from "./components/buttons/buttonOne.vue";
+import buttonLarge from "./components/buttons/buttonLarge.vue";
 </script>
 
 <template>
   <header>
     <nav class="m-10 flex h-8 justify-center font-robotoMono">
       <RouterLink class="m-1" to="/"
-        ><buttonOne class="hover:bg-neutral-700" text="Home"></buttonOne
+        ><buttonLarge class="hover:bg-neutral-700" text="Home"></buttonLarge
       ></RouterLink>
       <RouterLink class="m-1" to="/about"
-        ><buttonOne class="hover:bg-neutral-700" text="About"></buttonOne
+        ><buttonLarge class="hover:bg-neutral-700" text="About"></buttonLarge
       ></RouterLink>
       <RouterLink class="m-1" to="/content"
-        ><buttonOne class="hover:bg-neutral-700" text="Content"></buttonOne
+        ><buttonLarge class="hover:bg-neutral-700" text="Content"></buttonLarge
       ></RouterLink>
       <RouterLink class="m-1" to="/publish"
-        ><buttonOne class="hover:bg-neutral-700" text="Publish"></buttonOne
+        ><buttonLarge class="hover:bg-neutral-700" text="Publish"></buttonLarge
       ></RouterLink>
     </nav>
   </header>

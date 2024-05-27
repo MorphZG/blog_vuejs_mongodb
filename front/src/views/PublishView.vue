@@ -4,7 +4,7 @@ import contentCreator from "@/components/contentCreator.vue";
 
 <template>
   <main>
-    <h1 class="left-20 ml-10 font-roboto text-2xl font-thin">>> Publish</h1>
+    <h1 class="mb-5 ml-10 font-roboto text-2xl font-thin">>> Publish</h1>
     <contentCreator />
   </main>
 </template>

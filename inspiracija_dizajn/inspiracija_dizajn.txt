@@ -1,0 +1,11 @@
+Waylon Walker; technology, datascience, linux...
+github: https://github.com/WaylonWalker/waylonwalker.com
+blog: https://waylonwalker.com/
+
+Arindam Majumder: technical writer, frontend developer...
+github: https://github.com/Arindam200
+blog: https://arindam-majumder.vercel.app/
+
+Robin Goetz: angular developer, analog enthuziast...
+github: https://github.com/goetzrobin
+blog: https://goetzrobin.github.io

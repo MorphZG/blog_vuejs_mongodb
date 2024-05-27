@@ -1,28 +1,21 @@
 # Personal Blog
 
-## Built with Vue.js
-
-## Project Setup
+## Scripts
 
 ```sh
-npm install
+npm install  #install dependancies
+npm run dev  #compile and hot reload for development
+npm run build  #compile for production
+npm run lint  #lint with eslint
+npm run format  #format with prettier
 ```
 
-### Compile and Hot-Reload for Development
+## List of features
 
-```sh
-npm run dev
-```
+- Rest API
+- mongodb database
 
-### Compile and Minify for Production
+## Todo
 
-```sh
-npm run build
-```
-
-### Lint and format
-
-```sh
-npm run lint
-npm run format
-```
+- [ ] Publish, edit and delete the blog posts
+- [x] Store the posts in a mongodb database

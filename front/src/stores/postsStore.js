@@ -12,7 +12,7 @@ const usePostsStore = defineStore("posts", () => {
       post.createdAt = new Date(post.createdAt);
       post.dateString = post.createdAt.toLocaleDateString("en-GB", {
         day: "2-digit",
-        month: "2-digit",
+        month: "short",
         year: "numeric"
       });
       posts.value.push(post);
