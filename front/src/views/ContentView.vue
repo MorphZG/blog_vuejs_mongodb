@@ -37,6 +37,7 @@ onMounted(() => {
           :title="post.title"
           :date-string="post.dateString"
           :content="post.content"
+          :tags="post.tags"
         />
       </div>
     </div>
