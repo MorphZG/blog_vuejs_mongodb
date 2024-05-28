@@ -13,7 +13,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="">
+  <main class="">
     <h1 class="mb-5 ml-10 font-roboto text-2xl font-thin">>> Featured Posts</h1>
     <div class="grid grid-cols-3 justify-center gap-3 px-4">
       <div class="" v-for="post in postsStore.posts" :key="post._id">
@@ -25,7 +25,7 @@ onMounted(() => {
         />
       </div>
     </div>
-  </section>
+  </main>
   <!-- implement sorting -->
   <!-- newest first / oldest first -->
   <section class="my-10">

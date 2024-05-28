@@ -15,11 +15,13 @@ let targetPost = postsStore.posts.find((arrayElement) => {
 </script>
 
 <template>
-  <div class="size-2/3 p-10 pl-20">
-    <h1 class="font-robotoMono text-3xl font-bold">{{ targetPost.title }}</h1>
-    <p class="my-5 font-cabin">{{ targetPost.tags }}</p>
-    <p class="font-lekton">{{ targetPost.content }}</p>
-  </div>
+  <main>
+    <div class="size-2/3 p-10 pl-20">
+      <h1 class="font-robotoMono text-3xl font-bold">{{ targetPost.title }}</h1>
+      <p class="my-5 font-cabin">{{ targetPost.tags }}</p>
+      <p class="font-lekton">{{ targetPost.content }}</p>
+    </div>
+  </main>
 </template>
 
 <style lang="css" scoped></style>

@@ -30,6 +30,7 @@ const props = defineProps({
         <p class="text-left font-lekton">reading time: {{ getReadingTime(content) }} min</p>
       </div>
     </div>
+    <a @click="$router.push(`/content/${postId}`)">Read more...</a>
   </main>
 </template>
 

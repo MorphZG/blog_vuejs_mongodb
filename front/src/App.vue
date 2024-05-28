@@ -6,24 +6,24 @@ import buttonLarge from "./components/buttons/buttonLarge.vue";
 <template>
   <header>
     <nav class="m-10 flex h-8 justify-center font-robotoMono">
-      <RouterLink class="m-1" to="/"
+      <RouterLink class="m-1" :to="{ name: 'homeRoute' }"
         ><buttonLarge class="hover:bg-neutral-700" text="Home"></buttonLarge
       ></RouterLink>
-      <RouterLink class="m-1" to="/about"
+      <RouterLink class="m-1" :to="{ name: 'aboutRoute' }"
         ><buttonLarge class="hover:bg-neutral-700" text="About"></buttonLarge
       ></RouterLink>
-      <RouterLink class="m-1" to="/content"
+      <RouterLink class="m-1" :to="{ name: 'contentRoute' }"
         ><buttonLarge class="hover:bg-neutral-700" text="Content"></buttonLarge
       ></RouterLink>
-      <RouterLink class="m-1" to="/publish"
+      <RouterLink class="m-1" :to="{ name: 'publishRoute' }"
         ><buttonLarge class="hover:bg-neutral-700" text="Publish"></buttonLarge
       ></RouterLink>
     </nav>
   </header>
 
-  <div>
+  <section>
     <RouterView />
-  </div>
+  </section>
 </template>
 
 <style scoped></style>

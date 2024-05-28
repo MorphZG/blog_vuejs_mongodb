@@ -4,34 +4,40 @@ import ContentView from "@/views/ContentView.vue";
 import AboutView from "@/views/AboutView.vue";
 import PublishView from "@/views/PublishView.vue";
 import PostView from "@/views/PostView.vue";
+import TagView from "@/views/TagView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "homeRoute",
       component: HomeView
     },
     {
       path: "/about",
-      name: "about",
+      name: "aboutRoute",
       component: AboutView
     },
     {
       path: "/content",
-      name: "content",
+      name: "contentRoute",
       component: ContentView
     },
     {
       path: "/publish",
-      name: "publish",
+      name: "publishRoute",
       component: PublishView
     },
     {
       path: "/content/:postId",
-      name: "post",
+      name: "postRoute",
       component: PostView
+    },
+    {
+      path: "/content/:tag",
+      name: "tagRoute",
+      component: TagView
     }
   ]
 });

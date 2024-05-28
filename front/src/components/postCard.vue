@@ -20,7 +20,7 @@ const props = defineProps({
   <main>
     <div
       class="border-gradient border-gradient-red hoverFx ml-10 cursor-pointer bg-neutral-800 p-5"
-      @click="$router.push(`/content/${postId}`)"
+      @click="$router.push({ name: 'postRoute', params: { postId: postId } })"
     >
       <h1 class="truncate text-center font-robotoMono text-xl font-bold">{{ title }}</h1>
       <img src="https://placehold.co/400x100" alt="placeholder image" />
