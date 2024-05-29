@@ -18,19 +18,29 @@ const props = defineProps({
 <template>
   <!-- refactor using slots -->
   <main>
-    <div class="ml-10 flex cursor-pointer border" @click="$router.push(`/content/${postId}`)">
+    <div class="ml-10 flex">
       <img src="https://placehold.co/200x150" alt="placeholder image" />
 
       <div class="ml-5">
         <p class="text-left font-lekton">{{ dateString }}</p>
-        <h1 class="text-md text-left font-robotoMono font-bold">{{ title }}</h1>
+        <h1
+          class="text-md cursor-pointer text-left font-robotoMono font-bold"
+          @click="$router.push(`/content/${postId}`)"
+        >
+          {{ title }}
+        </h1>
 
-        <span v-for="(tag, index) in tags" :key="index">{{ tag }}</span>
+        <span class="m-1" v-for="(tag, index) in tags" :key="index">{{ `${tag}` }}</span>
         <p class="truncate text-wrap text-left">{{ content }}</p>
         <p class="text-left font-lekton">reading time: {{ getReadingTime(content) }} min</p>
+        <a
+          class="cursor-pointer"
+          @click="$router.push({ name: 'postRoute', params: { postId: postId } })"
+        >
+          Read more...
+        </a>
       </div>
     </div>
-    <a @click="$router.push({ name: 'postRoute', params: { postId: postId } })">Read more...</a>
   </main>
 </template>
 
