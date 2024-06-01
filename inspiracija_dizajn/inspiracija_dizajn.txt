@@ -9,3 +9,6 @@ blog: https://arindam-majumder.vercel.app/
 Robin Goetz: angular developer, analog enthuziast...
 github: https://github.com/goetzrobin
 blog: https://goetzrobin.github.io
+
+scrimba.com
+https://v2.scrimba.com/home

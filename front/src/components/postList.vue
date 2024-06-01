@@ -1,4 +1,6 @@
 <script setup>
+import { IoPricetags } from "oh-vue-icons/icons";
+
 function getReadingTime(content) {
   let words = content.split(" ");
   let count = words.length;
@@ -29,8 +31,8 @@ const props = defineProps({
         >
           {{ title }}
         </h1>
-
         <span class="m-1" v-for="(tag, index) in tags" :key="index">{{ `${tag}` }}</span>
+
         <p class="truncate text-wrap text-left">{{ content }}</p>
         <p class="text-left font-lekton">reading time: {{ getReadingTime(content) }} min</p>
         <a
