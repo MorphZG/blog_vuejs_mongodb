@@ -10,6 +10,7 @@ export default {
   plugins: [],
   theme: {
     extend: {
+      colors: {},
       backgroundImage: {
         imageName: "url('src/assets/background.webp')" // bg-imageName
       }

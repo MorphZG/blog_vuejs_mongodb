@@ -5,8 +5,15 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-neutral-900 text-slate-200;
+  html, body {
+    @apply text-gray-300;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom,
+      rgb(20, 22, 26) 0%,
+      rgb(35, 40, 48) 100%
+    );
   }
 }
 
@@ -30,7 +37,7 @@
   border-image-slice: 1;
 }
 .border-gradient-red {
-  border-image-source: linear-gradient(to bottom, rgb(294, 63, 94), #232323);
+  border-image-source: linear-gradient(to bottom, rgb(294, 63, 94), rgb(35, 35, 35));
 }
 .only-top {
   border-left: 0;
