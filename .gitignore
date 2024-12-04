@@ -1,4 +1,5 @@
 inspiracija_dizajn/
+.env
 # Logs
 logs
 *.log
